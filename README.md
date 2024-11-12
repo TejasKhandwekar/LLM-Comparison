@@ -1,9 +1,19 @@
-# LLM-Comparison
- 
-Foundation models of neural networks show great promise in forecasting, but independent empirical evaluations of their accuracy are still rare. In this project, I seek to replicate and obtain valid and reliable evidence on the efficacy of foundation models versus 20 established neural networks, machine learning, and statistical benchmarks, using rolling time origins and robust error metrics. My results confirm the capability of Foundation models to outperform simple benchmarks and most neural networks in forecasting, but not yet most statistical and machine learning approaches.
-## Key Elements:
-I employed a range of machine learning models including XGBoost, CatBoost, RandomForestRegressor, and LightGBM, implemented through the MLForecast library. Along with a bunch of statistical models like AutoETS, AutoArima, AutoCES etc and neural network models like LSTMs, RNNs, KANs etc on the popular time series dataset of Airplane Passengers and Us accidental deaths. Using this bunch of models and ensuring that all models could perform their best was a challenge I tackled and I made sure to best practices for each of these models. I integrated custom metric functions, including SMAPE and RMSSE, to evaluate model performance comprehensively. The project focused on multi-horizon forecasting for horizons from one-step ahead forecasts to eighteen-step ahead forecasts, with a dataset split into training and testing periods to simulate real-world deployment. Finally, I implemented a few most popular foundational models released in the past few years i.e. Moirai, TimeGPT, and Chronos, and their variations.
-## Impact: 
-Conducting a comprehensive empirical evaluation of foundation models versus various time series forecasting methods confirms several important insights of low-frequency monthly data. Although Foundation models – led by Morai large - outperform earlier deep and shallow ANN architectures, as well as simple statistical benchmarks, statistical methods still outperform all other families of algorithms on low-frequency data, followed by machine learning methods, while being substantially cheaper to train. This is particularly noteworthy as Foundation models were likely trained on these iconic time series and thus could have remembered the out-of-sample actuals. My findings support earlier studies where deep ANNs failed to outperform established statistical methods on low-frequency time series data.
+# Multi-Origin Time Series Forecasting with Foundation Models
+
+## Overview
+This project implements a comprehensive time series forecasting framework utilizing a multi-origin approach to evaluate foundation models against traditional forecasting methods. We compare the performance of foundation models against 20 established neural networks, machine learning, and statistical benchmarks using rolling time origins and robust error metrics.
+
+## Key Features
+- Multi-origin evaluation framework
+- Implementation of 20+ forecasting models including:
+  - Foundation Models (TimeGPT, Chronos, Moirai)
+  - Neural Networks (MLP, NBEATS, NHITS, etc.)
+  - Statistical Models (ARIMA, ETS, etc.)
+  - Machine Learning Models (XGBoost, LightGBM, etc.)
+- Robust error metrics (RMSSE, SMAPE, etc.)
+- Comprehensive visualization tools
+## Results
+Our findings demonstrate that Foundation models can outperform simple benchmarks and most neural networks in forecasting tasks, though they have not yet surpassed the performance of most statistical and machine-learning approaches.
+
 ## Usage: 
-Finaal_Model.ipynb scripts contain the entire code to replicate the sure, you just need to install the required libraries and support for Pytorch with CUDA
+The main implementation is in `Final_model_accidental_Deaths.ipynb` script which contain the entire code to replicate the sure, you just need to install the required libraries and support for Pytorch with CUDA
